@@ -1,16 +1,59 @@
 ---
-
+import "../styles/global.css";
+const features = [
+  'Offerte in 3 Minuten – inkl. Logo',
+  'Schweizer Hochdeutsch & CHF',
+  'Professionelles A4‑PDF',
+  'DSG/DSGVO-konform, CH-Storage',
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="de-CH">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Offerte generieren – Schnell & professionell | offerte-generieren.ch</title>
+    <meta name="description" content="Erstelle in Minuten eine professionelle Offerte als PDF. CH‑Währung, CH‑Deutsch, Logo integriert, DSG-konform." />
+  </head>
+  <body>
+    <header class="border-b">
+      <div class="container flex items-center justify-between py-4">
+        <div class="text-xl font-bold">offerte‑generieren.ch</div>
+        <nav class="text-sm">
+          <a class="mr-4 hover:underline" href="/datenschutz">Datenschutz</a>
+          <a class="hover:underline" href="/agb">AGB</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="py-10 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+            Offerte in <span class="text-primary">3 Minuten</span> – als A4‑PDF, CH‑konform
+          </h1>
+          <p class="mt-4 text-lg text-gray-700">
+            Für Reinigung, Malerei und weitere Branchen. Logo hochladen, Details eingeben, PDF herunterladen.
+          </p>
+          <ul class="mt-6 space-y-2">
+            {features.map((f) => <li class="flex items-start"><span class="mt-1 mr-2">✔</span>{f}</li>)}
+          </ul>
+          <div class="mt-8">
+            <a class="btn btn-primary" href="/app">Jetzt starten</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/demo/demo-pdf-preview.png" alt="Beispiel-Offerte" class="rounded-xl w-full" loading="lazy" />
+          <p class="text-xs text-gray-500 mt-2">Beispielansicht – Logos & Farben individuell.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t mt-10">
+      <div class="container py-6 text-sm text-gray-600">
+        © {new Date().getFullYear()} offerte‑generieren.ch – CH‑Hosting, keine Trainingsnutzung der Daten.
+      </div>
+    </footer>
+  </body>
 </html>

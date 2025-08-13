@@ -1,5 +1,10 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  integrations: [react(), tailwind()],
+  server: { port: 4321 },
+  output: 'server',
+  adapter: undefined // Vercel auto-detect
+});
