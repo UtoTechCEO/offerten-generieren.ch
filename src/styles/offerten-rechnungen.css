@@ -339,6 +339,388 @@
   .og *, .og *::before, .og *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
+/* =============================================================
+   GENERATIX / NE O G L A S S · V1.2
+   Prism Glass: 3D depth, cold platinum, soft cyan & lilac light.
+   Presentation only. No data, document or IndexedDB changes.
+   ============================================================= */
+.og.gx-neoglass {
+  --gx-bg: #090d1a;
+  --gx-panel: rgba(231, 241, 255, .085);
+  --gx-panel-strong: rgba(229, 239, 255, .13);
+  --gx-stroke: rgba(227, 242, 255, .25);
+  --gx-stroke-strong: rgba(233, 246, 255, .38);
+  --gx-cyan: #9ceaff;
+  --gx-purple: #c7aeff;
+  --gx-metal: #e7efff;
+  --gx-shadow: 0 32px 85px rgba(0, 0, 0, .34), 0 8px 27px rgba(16, 21, 57, .18);
+  background: #080e1b;
+}
+.og.gx-neoglass .kicker, .og.gx-neoglass .eyebrow { color: #b4d9ed; }
+.og.gx-neoglass .signal, .og.gx-neoglass .status-light { background: #a1eeff; box-shadow: 0 0 6px #a1eeff, 0 0 22px rgba(138, 228, 255, .77); }
+.og.gx-neoglass .hero {
+  min-height: 680px;
+  background:
+    radial-gradient(ellipse 48% 51% at 76% 21%, rgba(152, 115, 255, .19), transparent 77%),
+    radial-gradient(ellipse 52% 63% at 99% 75%, rgba(89, 216, 251, .17), transparent 80%),
+    radial-gradient(ellipse 42% 51% at 8% 91%, rgba(123, 113, 216, .16), transparent 85%),
+    linear-gradient(138deg, #0a101f 0%, #16172d 53%, #0a1424 100%);
+}
+.og.gx-neoglass .hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  opacity: .64;
+  background: linear-gradient(117deg, transparent 23%, rgba(233, 248, 255, .06) 32%, transparent 48%, transparent 73%, rgba(195, 163, 255, .05) 79%, transparent 88%);
+}
+.og.gx-neoglass .hero-grid-lines {
+  opacity: .8;
+  background-image: linear-gradient(rgba(205, 234, 255, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(205, 234, 255, .045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(105deg, rgba(0,0,0,.6) 5%, rgba(0,0,0,.21) 62%, transparent 92%);
+}
+.og.gx-neoglass .prism-light, .og.gx-neoglass .hero-stars { position: absolute; pointer-events: none; z-index: -1; }
+.og.gx-neoglass .prism-light { width: 530px; height: 530px; border-radius: 50%; filter: blur(62px); }
+.og.gx-neoglass .prism-light-cyan { right: -195px; top: 35%; background: radial-gradient(circle, rgba(93, 224, 255, .22), transparent 64%); }
+.og.gx-neoglass .prism-light-violet { right: 20%; top: -36%; background: radial-gradient(circle, rgba(188, 130, 255, .24), transparent 69%); }
+.og.gx-neoglass .hero-stars {
+  inset: 0;
+  opacity: .6;
+  background-image:
+    radial-gradient(circle at 78% 22%, #d0f9ff 0 1px, transparent 1.5px),
+    radial-gradient(circle at 93% 57%, #c0a8ff 0 1.2px, transparent 2px),
+    radial-gradient(circle at 53% 12%, #cce5ff 0 1px, transparent 1.5px),
+    radial-gradient(circle at 24% 74%, #b0ddff 0 .8px, transparent 1.5px);
+}
+.og.gx-neoglass .hero-eyebrow {
+  padding: 11px 16px;
+  border: 1px solid rgba(191, 232, 255, .28);
+  border-radius: 100px;
+  background: linear-gradient(145deg, rgba(221, 241, 255, .12), rgba(191, 170, 251, .07));
+  box-shadow: inset 0 1px rgba(255, 255, 255, .18), 0 13px 35px rgba(0,0,0,.12);
+  backdrop-filter: blur(20px) saturate(160%);
+}
+.og.gx-neoglass .eyebrow-glint { font-size: .96rem; color: #d1baff; }
+.og.gx-neoglass .hero h1 { text-shadow: 0 7px 42px rgba(0,0,0,.15); }
+.og.gx-neoglass .hero h1 > span {
+  background: linear-gradient(111deg, #ffffff 0%, #d8e9fd 31%, #a1f0ff 58%, #d5b6ff 81%, #f4e7ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0 5px 32px rgba(165, 195, 255, .22));
+}
+.og.gx-neoglass .hero .brand-dot { color: #a5f1ff; -webkit-text-fill-color: #a5f1ff; }
+.og.gx-neoglass .hero-lead { color: #c0cce0; }
+.og.gx-neoglass .hero-button {
+  background: linear-gradient(130deg, #fff 0%, #ddf9ff 39%, #d1d3fc 84%, #e6d5ff 100%);
+  border: 1px solid rgba(255, 255, 255, .81);
+  border-radius: 13px;
+  box-shadow: inset 0 2px 1px #fff, inset 0 -3px 9px rgba(144, 146, 195, .19), 0 13px 32px rgba(115, 200, 242, .2), 0 4px 0 rgba(24, 38, 65, .62);
+  transform: translateY(-2px);
+}
+.og.gx-neoglass .hero-button:hover { transform: translateY(-5px); box-shadow: inset 0 2px 1px #fff, 0 24px 44px rgba(120, 197, 252, .3), 0 5px 0 rgba(24,38,65,.6); }
+.og.gx-neoglass .hero-free { color: #c3d1e0; }
+.og.gx-neoglass .hero-free-divider { width: 3px; height: 3px; border-radius: 50%; background: #879cb6; }
+.og.gx-neoglass .hero-facts { gap: 10px; }
+.og.gx-neoglass .hero-facts > span {
+  padding: 10px 13px;
+  color: #90e4f7;
+  border-radius: 9px;
+  border: 1px solid rgba(206, 235, 255, .17);
+  background: rgba(229, 242, 255, .055);
+  box-shadow: inset 0 1px rgba(255,255,255,.075);
+  backdrop-filter: blur(19px);
+}
+.og.gx-neoglass .hero-facts b { color: #d4e2f1; }
+/* The holographic hero panel: an actual floating glass object. */
+.og.gx-neoglass .hero-visual {
+  isolation: isolate;
+  perspective: 1200px;
+  padding: 29px;
+  border-radius: 29px;
+  border: 1px solid rgba(235, 248, 255, .51);
+  background:
+    linear-gradient(127deg, rgba(249, 253, 255, .24) 0%, rgba(197, 213, 255, .11) 28%, rgba(126, 222, 255, .045) 70%, rgba(222, 199, 255, .16) 100%),
+    rgba(38, 49, 84, .18);
+  box-shadow:
+    inset 2px 2px 1px rgba(255, 255, 255, .38),
+    inset -1px -1px 0 rgba(151, 171, 255, .13),
+    0 43px 95px rgba(0, 0, 0, .47),
+    0 0 76px rgba(130, 141, 248, .15),
+    0 0 100px rgba(110, 221, 249, .10);
+  backdrop-filter: blur(44px) saturate(180%);
+  -webkit-backdrop-filter: blur(44px) saturate(180%);
+  transform: translateY(-3px) rotateY(-6deg) rotateX(3deg);
+  transform-style: preserve-3d;
+  transition: transform .55s cubic-bezier(.2,.75,.25,1), box-shadow .4s;
+}
+.og.gx-neoglass .hero-visual:hover { transform: translateY(-9px) rotateY(-2deg) rotateX(1deg); box-shadow: inset 2px 2px 1px rgba(255,255,255,.42), 0 54px 110px rgba(0,0,0,.48), 0 0 105px rgba(159, 142, 255, .22); }
+.og.gx-neoglass .hero-visual::after { inset: -11px; border-radius: 37px; border: 1px solid rgba(203, 224, 255, .15); box-shadow: 0 0 55px rgba(192, 155, 255, .09); }
+.og.gx-neoglass .hero-visual-reflection {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(119deg, rgba(255, 255, 255, .15), transparent 33%, transparent 67%, rgba(172, 231, 255, .08));
+  mask-image: linear-gradient(110deg, #000, transparent 68%);
+}
+.og.gx-neoglass .glass-meta { color: #d6e5f9; }
+.og.gx-neoglass .glass-meta b { color: #adadff; }
+.og.gx-neoglass .visual-online { color: #b5f1ff; }
+.og.gx-neoglass .visual-title { position: relative; z-index: 1; margin-top: 39px; font-size: clamp(2.15rem, 3.25vw, 3rem); line-height: 1.08; }
+.og.gx-neoglass .visual-title span { color: #d6bdfd; text-shadow: 0 0 25px rgba(195, 152, 255, .22); }
+.og.gx-neoglass .visual-hologram {
+  position: absolute;
+  top: 84px;
+  right: 27px;
+  width: 113px;
+  height: 113px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateZ(56px) rotate(-10deg);
+  background: radial-gradient(circle at 28% 21%, rgba(220, 251, 255, .54), rgba(172, 149, 246, .15) 46%, rgba(58, 77, 136, .18) 66%);
+  border: 1px solid rgba(223, 244, 255, .49);
+  box-shadow: inset 3px 3px 9px rgba(235,253,255,.38), inset -8px -12px 20px rgba(81,76,158,.27), 0 20px 35px rgba(17,17,44,.46), 0 0 50px rgba(172,154,255,.25);
+  backdrop-filter: blur(22px);
+}
+.og.gx-neoglass .hologram-orbit { position: absolute; inset: -9px; border-radius: 50%; border: 1px solid rgba(167,240,255,.5); transform: rotateX(64deg) rotate(-17deg); }
+.og.gx-neoglass .orbit-violet { inset: -17px; border-color: rgba(205,170,255,.49); transform: rotateY(64deg) rotate(35deg); }
+.og.gx-neoglass .hologram-center { font-size: 2.2rem; font-weight: 850; color: #f7fcff; letter-spacing: -.13em; text-shadow: 0 0 16px rgba(169,241,255,.6); }
+.og.gx-neoglass .hologram-center span { color: #9ceaff; }
+.og.gx-neoglass .visual-document {
+  z-index: 1;
+  transform: translateZ(35px) rotate(-1deg);
+  transform-style: preserve-3d;
+  margin-top: 29px;
+  border-radius: 16px;
+  border: 1px solid rgba(236, 248, 255, .39);
+  background: linear-gradient(127deg, rgba(244, 251, 255, .26), rgba(193, 225, 255, .105) 47%, rgba(184, 160, 255, .13));
+  box-shadow: inset 0 1px rgba(255,255,255,.32), 0 25px 36px rgba(7, 13, 35, .32), 0 0 45px rgba(154, 208, 255, .10);
+  backdrop-filter: blur(25px);
+}
+.og.gx-neoglass .visual-line { background: linear-gradient(90deg, rgba(219, 239, 255, .55), rgba(208, 187, 255, .24)); }
+.og.gx-neoglass .visual-row strong { color: #a4f1ff; }
+.og.gx-neoglass .visual-bottom { color: #b1c4d8; margin-top: 23px; font-weight: 660; }
+.og.gx-neoglass .floating-chip {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid rgba(241, 251, 255, .46);
+  border-radius: 100px;
+  color: #eafbff;
+  font-size: .6rem;
+  letter-spacing: .1em;
+  font-weight: 850;
+  white-space: nowrap;
+  background: linear-gradient(140deg, rgba(222,242,255,.25), rgba(171,185,255,.12));
+  box-shadow: inset 0 1px rgba(255,255,255,.36), 0 13px 30px rgba(0,0,0,.34), 0 0 38px rgba(129,224,252,.1);
+  backdrop-filter: blur(35px);
+}
+.og.gx-neoglass .floating-chip span { font-size: .9rem; color: #99f1ff; }
+.og.gx-neoglass .chip-cyan { right: -43px; bottom: 126px; transform: translateZ(75px) rotate(5deg); }
+.og.gx-neoglass .chip-violet { left: -55px; top: 208px; transform: translateZ(75px) rotate(-6deg); background: linear-gradient(140deg, rgba(223,208,255,.3), rgba(167,158,247,.11)); }
+.og.gx-neoglass .chip-violet span { color: #d4b5ff; }
+/* Deeper atmosphere around every glass panel. */
+.og.gx-neoglass .workspace {
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 33% at 7% 9%, rgba(101, 196, 255, .13), transparent 78%),
+    radial-gradient(ellipse 53% 33% at 97% 40%, rgba(167, 111, 255, .13), transparent 80%),
+    radial-gradient(ellipse 55% 37% at 20% 85%, rgba(67, 182, 239, .08), transparent 80%),
+    linear-gradient(160deg, #0d1526, #15162b 42%, #0b1425 78%, #090f1f);
+}
+.og.gx-neoglass .workspace-aurora { position: absolute; z-index: -1; pointer-events: none; border-radius: 50%; filter: blur(70px); }
+.og.gx-neoglass .workspace-aurora-cyan { width: 600px; height: 950px; top: 180px; left: -330px; background: radial-gradient(ellipse, rgba(85, 208, 254, .17), transparent 73%); }
+.og.gx-neoglass .workspace-aurora-purple { width: 750px; height: 900px; top: 520px; right: -410px; background: radial-gradient(ellipse, rgba(164, 112, 245, .16), transparent 75%); }
+.og.gx-neoglass .workspace-head h2 span { color: #cbbcff; text-shadow: 0 0 38px rgba(191,157,255,.16); }
+.og.gx-neoglass .storage-state {
+  border-color: rgba(155, 239, 255, .34);
+  color: #b8f5ff;
+  background: linear-gradient(110deg, rgba(142, 219, 251, .11), rgba(188, 163, 255, .06));
+  box-shadow: inset 0 1px rgba(255,255,255,.18), 0 0 27px rgba(122,211,250,.09);
+  backdrop-filter: blur(23px);
+}
+.og.gx-neoglass .tabs {
+  padding: 8px;
+  gap: 7px;
+  border-color: rgba(227, 243, 255, .35);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(228, 241, 255, .17), rgba(173, 168, 238, .085) 55%, rgba(187, 237, 255, .075));
+  box-shadow: inset 0 1px rgba(255,255,255,.26), inset 0 -1px rgba(165,184,255,.11), 0 20px 45px rgba(0,0,0,.23), 0 0 42px rgba(163,184,255,.07);
+  backdrop-filter: blur(38px) saturate(180%);
+}
+.og.gx-neoglass .tabs button { color: #c4d3e5; border-radius: 11px; }
+.og.gx-neoglass .tabs button:hover { background: rgba(213, 233, 255, .17); }
+.og.gx-neoglass .tabs button.active {
+  color: #131d35;
+  background: linear-gradient(135deg, #f8feff, #ccf4ff 49%, #dac8ff);
+  border-color: rgba(255,255,255,.68);
+  box-shadow: inset 0 2px rgba(255,255,255,.95), inset 0 -3px 9px rgba(130, 155, 210, .12), 0 9px 24px rgba(112,197,240,.16), 0 2px 0 rgba(9,20,36,.38);
+}
+.og.gx-neoglass .form-card,
+.og.gx-neoglass .preview-card,
+.og.gx-neoglass .manage-card {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(233, 248, 255, .4);
+  border-radius: 23px;
+  background:
+    linear-gradient(142deg, rgba(251,254,255,.18), rgba(204,225,255,.085) 35%, rgba(180,173,255,.065) 75%, rgba(226,244,255,.12)),
+    rgba(22, 33, 58, .28);
+  box-shadow:
+    inset 1px 1px rgba(255,255,255,.31),
+    inset -1px -1px rgba(162,190,255,.09),
+    0 38px 78px rgba(0,0,0,.30),
+    0 0 48px rgba(114,188,249,.075);
+  backdrop-filter: blur(43px) saturate(160%);
+  -webkit-backdrop-filter: blur(43px) saturate(160%);
+}
+.og.gx-neoglass .form-card::before,
+.og.gx-neoglass .preview-card::before,
+.og.gx-neoglass .manage-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(116deg, rgba(255,255,255,.115), transparent 31%, transparent 73%, rgba(173,226,255,.055));
+}
+.og.gx-neoglass .form-card { overflow: hidden; }
+.og.gx-neoglass .stepper {
+  background: linear-gradient(120deg, rgba(226,243,255,.14), rgba(188,182,251,.07));
+  border-bottom: 1px solid rgba(228,242,255,.25);
+  box-shadow: inset 0 1px rgba(255,255,255,.1);
+}
+.og.gx-neoglass .step-button span {
+  border-color: rgba(226,242,255,.3);
+  color: #afc0db;
+  background: linear-gradient(145deg, rgba(240,247,255,.18), rgba(190,201,255,.055));
+  box-shadow: inset 0 1px rgba(255,255,255,.2), 0 5px 10px rgba(0,0,0,.13);
+}
+.og.gx-neoglass .step-button.active span {
+  color: #15213a;
+  background: linear-gradient(145deg, #fff, #bceeff 56%, #c7bcff);
+  border-color: rgba(255,255,255,.73);
+  box-shadow: inset 0 2px rgba(255,255,255,.8), 0 0 29px rgba(148, 215, 255, .23), 0 5px 11px rgba(0,0,0,.21);
+  transform: translateY(-2px);
+}
+.og.gx-neoglass .step-button.active strong { color: #dff8ff; }
+.og.gx-neoglass .step-button.complete span { color: #b6eeff; background: rgba(151,228,255,.15); }
+.og.gx-neoglass .step-count { border-color: rgba(235,249,255,.43); background: linear-gradient(135deg, rgba(228, 246, 255, .3), rgba(176, 165, 250, .14)); box-shadow: inset 0 1px rgba(255,255,255,.32), 0 10px 24px rgba(0,0,0,.2); }
+.og.gx-neoglass .field input,
+.og.gx-neoglass .field select,
+.og.gx-neoglass .field textarea,
+.og.gx-neoglass .search {
+  border-color: rgba(225, 240, 255, .3);
+  border-radius: 12px;
+  background: linear-gradient(143deg, rgba(8, 16, 34, .57), rgba(22, 30, 62, .38));
+  box-shadow: inset 0 2px 5px rgba(0,0,0,.11), inset 0 1px rgba(255,255,255,.035);
+}
+.og.gx-neoglass .field input:focus,
+.og.gx-neoglass .field select:focus,
+.og.gx-neoglass .field textarea:focus,
+.og.gx-neoglass .search:focus {
+  border-color: #a8ebff;
+  background: rgba(14, 25, 48, .68);
+  box-shadow: 0 0 0 3px rgba(135, 222, 255, .11), 0 0 25px rgba(146, 217, 255, .14), inset 0 1px rgba(255,255,255,.08);
+}
+.og.gx-neoglass .btn.primary {
+  color: #122039;
+  border: 1px solid rgba(255,255,255,.69);
+  background: linear-gradient(138deg, #f8feff 0%, #d2f6ff 50%, #d5c9ff 100%);
+  box-shadow: inset 0 2px rgba(255,255,255,.94), inset 0 -3px 7px rgba(154,164,211,.14), 0 12px 25px rgba(111,201,241,.15), 0 3px 0 rgba(12,23,47,.39);
+  transform: translateY(-1px);
+}
+.og.gx-neoglass .btn.primary:hover { transform: translateY(-4px); box-shadow: inset 0 2px white, 0 17px 35px rgba(129,197,251,.23), 0 4px 0 rgba(12,23,47,.39); }
+.og.gx-neoglass .btn.secondary {
+  color: #e0eafb;
+  border-color: rgba(222, 242, 255, .36);
+  background: linear-gradient(145deg, rgba(237,247,255,.2), rgba(190, 190, 248,.09));
+  box-shadow: inset 0 1px rgba(255,255,255,.21), 0 9px 20px rgba(0,0,0,.14);
+  backdrop-filter: blur(20px);
+}
+.og.gx-neoglass .add-btn, .og.gx-neoglass .mini-btn {
+  background: linear-gradient(135deg, rgba(216,237,255,.16), rgba(196,173,255,.07));
+  border-color: rgba(214, 236, 255, .38);
+  box-shadow: inset 0 1px rgba(255,255,255,.1);
+}
+.og.gx-neoglass .position-card,
+.og.gx-neoglass .record-card,
+.og.gx-neoglass .stat,
+.og.gx-neoglass .output-card,
+.og.gx-neoglass .totals,
+.og.gx-neoglass .og-color-panel {
+  border-color: rgba(218, 240, 255, .28);
+  background: linear-gradient(135deg, rgba(243,250,255,.14), rgba(164,185,255,.065) 65%, rgba(202,164,255,.08));
+  box-shadow: inset 0 1px rgba(255,255,255,.16), 0 12px 25px rgba(0,0,0,.12);
+  backdrop-filter: blur(23px);
+  -webkit-backdrop-filter: blur(23px);
+}
+.og.gx-neoglass .output-card:hover,
+.og.gx-neoglass .record-card:hover { border-color: rgba(156, 232, 255, .52); background: linear-gradient(125deg, rgba(219,245,255,.2), rgba(195, 169, 255, .11)); }
+.og.gx-neoglass .output-icon {
+  border-color: rgba(219, 247, 255, .38);
+  background: linear-gradient(135deg, rgba(221,247,255,.29), rgba(183,180,255,.1));
+  box-shadow: inset 0 1px rgba(255,255,255,.31), 0 8px 18px rgba(0,0,0,.14);
+  color: #c2f4ff;
+}
+.og.gx-neoglass .og-switch { border-color: rgba(218, 241, 255, .33) !important; background: linear-gradient(130deg, rgba(227,242,255,.2), rgba(175,169,249,.09)) !important; box-shadow: inset 0 1px rgba(255,255,255,.2), 0 8px 20px rgba(0,0,0,.15) !important; backdrop-filter: blur(26px); }
+.og.gx-neoglass .og-switch button { color: #cbdced !important; }
+.og.gx-neoglass .og-switch button.active { background: linear-gradient(125deg, #effdff, #c7ecff 52%, #d7c3ff) !important; color: #13213a !important; box-shadow: inset 0 2px rgba(255,255,255,.86), 0 5px 18px rgba(145,206,255,.22) !important; }
+.og.gx-neoglass .og-color-panel { background: linear-gradient(130deg, rgba(231,243,255,.13), rgba(179,164,249,.06)) !important; }
+.og.gx-neoglass .og-color-option { background: rgba(229,241,255,.1) !important; border-color: rgba(230,245,255,.26) !important; }
+.og.gx-neoglass .og-color-option.active { border-color: #a2efff !important; box-shadow: 0 0 0 2px rgba(158,224,255,.2), 0 0 20px rgba(173,162,255,.2) !important; }
+.og.gx-neoglass .preview-card { box-shadow: inset 0 1px rgba(255,255,255,.34), 0 35px 80px rgba(0,0,0,.34), 0 0 70px rgba(148,183,255,.1); }
+.og.gx-neoglass .paper { border-radius: 5px; box-shadow: 0 18px 42px rgba(0,0,0,.32), 0 0 0 1px rgba(255,255,255,.2); }
+.og.gx-neoglass .live-dot { color: #bbf3ff; }
+.og.gx-neoglass .product-outro {
+  background: radial-gradient(ellipse 46% 66% at 91% 18%, rgba(162, 112, 255, .2), transparent 72%), radial-gradient(ellipse 38% 67% at 8% 91%, rgba(91,204,255,.12), transparent 72%), #0b1020;
+}
+.og.gx-neoglass .outro-top h2 span { color: #c9bcff; }
+.og.gx-neoglass .feature-grid > div {
+  border-color: rgba(228, 242, 255, .31);
+  border-radius: 20px;
+  background: linear-gradient(133deg, rgba(239,250,255,.2), rgba(188,183,255,.07) 62%, rgba(172,230,255,.06));
+  box-shadow: inset 0 1px rgba(255,255,255,.23), 0 24px 55px rgba(0,0,0,.2);
+  backdrop-filter: blur(25px);
+  transition: transform .24s, box-shadow .24s;
+}
+.og.gx-neoglass .feature-grid > div:hover { transform: translateY(-5px); box-shadow: inset 0 1px rgba(255,255,255,.28), 0 29px 62px rgba(0,0,0,.25), 0 0 29px rgba(155,194,255,.09); }
+@media (max-width: 1080px) {
+  .og.gx-neoglass .chip-cyan { right: -14px; }
+  .og.gx-neoglass .chip-violet { left: -15px; }
+}
+@media (max-width: 820px) {
+  .og.gx-neoglass .hero-visual { transform: none; }
+  .og.gx-neoglass .hero-visual:hover { transform: translateY(-4px); }
+  .og.gx-neoglass .visual-document { transform: none; }
+  .og.gx-neoglass .hero { min-height: 0; }
+}
+@media (max-width: 610px) {
+  .og.gx-neoglass .hero-eyebrow { font-size: .57rem; line-height: 1.4; letter-spacing: .09em; padding: 9px 11px; }
+  .og.gx-neoglass .hero-visual { padding: 23px 19px; }
+  .og.gx-neoglass .visual-hologram { width: 80px; height: 80px; top: 95px; right: 18px; }
+  .og.gx-neoglass .hologram-center { font-size: 1.7rem; }
+  .og.gx-neoglass .visual-title { max-width: 250px; font-size: clamp(1.8rem, 7vw, 2.5rem); }
+  .og.gx-neoglass .floating-chip { font-size: .47rem; padding: 8px 10px; }
+  .og.gx-neoglass .chip-violet { left: -9px; top: 205px; }
+  .og.gx-neoglass .chip-cyan { right: -8px; bottom: 120px; }
+  .og.gx-neoglass .tabs { padding: 6px; }
+  .og.gx-neoglass .form-card, .og.gx-neoglass .preview-card, .og.gx-neoglass .manage-card { border-radius: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .og.gx-neoglass .hero-visual, .og.gx-neoglass .hero-button, .og.gx-neoglass .btn.primary, .og.gx-neoglass .feature-grid > div { transform: none !important; }
+}
+
+
 /* PRINT – show document only */
 @media print {
   @page { size: A4; margin: 15mm; }

@@ -3,14 +3,15 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="gx-footer">
+  <div class="gx-footer-aura" aria-hidden="true"></div>
   <div class="gx-footer-inner">
     <div class="gx-footer-brand">
       <a href="/" aria-label="generatix – Startseite">generatix<span>.</span></a>
-      <p>Offerten und Rechnungen neu gedacht. Ein Workspace für klare, professionelle Geschäftsdokumente.</p>
+      <p>Offerten generieren. Rechnungen erstellen. Dokumente neu erleben.</p>
       <small>powered by <strong>UTOTECH GmbH</strong></small>
     </div>
     <nav class="gx-footer-links" aria-label="Rechtliches und Navigation">
-      <a href="/#generator">Generator</a>
+      <a href="/#generator">Workspace</a>
       <a href="/datenschutz">Datenschutz</a>
       <a href="/agb">AGB</a>
     </nav>
@@ -18,22 +19,88 @@ const year = new Date().getFullYear();
   <div class="gx-footer-bottom">
     <span>© {year} UTOTECH GmbH</span>
     <span>offerten-generieren.ch</span>
-    <span>Made for modern business</span>
+    <span>DESIGNED FOR WHAT'S NEXT ✧</span>
   </div>
 </footer>
 
 <style>
-  .gx-footer { position: relative; background: #080d15; color: #a8b6c5; border-top: 1px solid rgba(234, 241, 250, .1); }
-  .gx-footer-inner { width: min(calc(100% - 48px), 1240px); margin: auto; padding: 54px 0 44px; display: flex; justify-content: space-between; gap: 42px; }
-  .gx-footer-brand { max-width: 450px; }
-  .gx-footer-brand > a { color: #f2f5f9; font-size: 1.6rem; letter-spacing: -.06em; font-weight: 800; text-decoration: none; }
-  .gx-footer-brand > a span { color: #8fe8f1; }
-  .gx-footer-brand p { line-height: 1.7; font-size: .86rem; color: #8596a8; margin: 12px 0 23px; }
-  .gx-footer-brand small { font-size: .68rem; letter-spacing: .06em; color: #91a1ae; text-transform: uppercase; }
-  .gx-footer-brand small strong { color: #dce4ee; letter-spacing: .075em; }
-  .gx-footer-links { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 18px 27px; }
-  .gx-footer-links a { color: #a6b5c3; text-decoration: none; font-size: .84rem; }
-  .gx-footer-links a:hover { color: #f4f7fa; }
-  .gx-footer-bottom { border-top: 1px solid rgba(234, 241, 250, .08); width: min(calc(100% - 48px), 1240px); padding: 20px 0 23px; margin: auto; display: flex; justify-content: space-between; gap: 10px; color: #6e8191; font-size: .72rem; }
-  @media (max-width: 660px) { .gx-footer-inner { width: calc(100% - 28px); flex-direction: column; padding: 42px 0 30px; gap: 24px; } .gx-footer-bottom { width: calc(100% - 28px); flex-wrap: wrap; } }
+  .gx-footer {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #b1c0d5;
+    background: linear-gradient(140deg, #090e19, #121628 48%, #09101c);
+    border-top: 1px solid rgba(221, 240, 255, .23);
+    box-shadow: inset 0 1px rgba(255, 255, 255, .06);
+  }
+  .gx-footer-aura {
+    position: absolute;
+    inset: auto -150px -250px auto;
+    width: 670px;
+    height: 480px;
+    z-index: -1;
+    background: radial-gradient(ellipse, rgba(166, 143, 245, .16), rgba(99, 220, 252, .065) 35%, transparent 69%);
+    pointer-events: none;
+  }
+  .gx-footer-inner {
+    width: min(calc(100% - 48px), 1240px);
+    margin: auto;
+    padding: 60px 0 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 40px;
+  }
+  .gx-footer-brand { max-width: 500px; }
+  .gx-footer-brand > a {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -.075em;
+    color: #f1f7ff;
+    text-decoration: none;
+    text-shadow: 0 0 25px rgba(220, 238, 255, .16);
+  }
+  .gx-footer-brand > a span { color: #9deefc; }
+  .gx-footer-brand p { line-height: 1.7; font-size: .84rem; color: #98aabd; margin: 15px 0 22px; }
+  .gx-footer-brand small { font-size: .67rem; font-weight: 700; letter-spacing: .09em; color: #9bacbf; text-transform: uppercase; }
+  .gx-footer-brand small strong { color: #e5ecf9; letter-spacing: .065em; }
+  .gx-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: flex-start;
+  }
+  .gx-footer-links a {
+    font-size: .78rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #d0dbe9;
+    border-radius: 10px;
+    border: 1px solid rgba(215, 235, 255, .18);
+    padding: 11px 15px;
+    background: linear-gradient(145deg, rgba(226, 240, 255, .11), rgba(213, 210, 255, .045));
+    box-shadow: inset 0 1px rgba(255,255,255,.1);
+    backdrop-filter: blur(20px);
+    transition: color .2s, border-color .2s;
+  }
+  .gx-footer-links a:hover { color: #fff; border-color: rgba(157, 238, 255, .46); }
+  .gx-footer-bottom {
+    width: min(calc(100% - 48px), 1240px);
+    border-top: 1px solid rgba(235, 246, 255, .12);
+    padding: 20px 0 24px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #8598ad;
+    font-size: .7rem;
+    letter-spacing: .035em;
+  }
+  @media (max-width: 700px) {
+    .gx-footer-inner { width: calc(100% - 28px); flex-direction: column; gap: 28px; padding: 45px 0 38px; }
+    .gx-footer-bottom { width: calc(100% - 28px); flex-wrap: wrap; }
+  }
+  @media (prefers-reduced-motion: reduce) { .gx-footer * { transition-duration: .01ms !important; } }
 </style>
