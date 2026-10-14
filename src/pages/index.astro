@@ -1,59 +1,277 @@
 ---
-import "../styles/global.css";
-const features = [
-  'Offerte in 3 Minuten – inkl. Logo',
-  'Schweizer Hochdeutsch & CHF',
-  'Professionelles A4‑PDF',
-  'DSG/DSGVO-konform, CH-Storage',
-];
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import "../styles/offerten-rechnungen.css";
 ---
 
-<html lang="de-CH">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Offerte generieren – Schnell & professionell | offerte-generieren.ch</title>
-    <meta name="description" content="Erstelle in Minuten eine professionelle Offerte als PDF. CH‑Währung, CH‑Deutsch, Logo integriert, DSG-konform." />
-  </head>
-  <body>
-    <header class="border-b">
-      <div class="container flex items-center justify-between py-4">
-        <div class="text-xl font-bold">offerte‑generieren.ch</div>
-        <nav class="text-sm">
-          <a class="mr-4 hover:underline" href="/datenschutz">Datenschutz</a>
-          <a class="hover:underline" href="/agb">AGB</a>
-        </nav>
-      </div>
-    </header>
+<Layout
+  title="Offerten generieren mit generatix | Offerten & Rechnungen"
+  description="Mit generatix professionelle Offerten und Rechnungen online erstellen, als PDF exportieren und lokal verwalten – kostenlos und ohne Registrierung."
+>
+  <Header />
 
-    <main class="container">
-      <section class="py-10 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h1 class="text-3xl md:text-5xl font-bold leading-tight">
-            Offerte in <span class="text-primary">3 Minuten</span> – als A4‑PDF, CH‑konform
-          </h1>
-          <p class="mt-4 text-lg text-gray-700">
-            Für Reinigung, Malerei und weitere Branchen. Logo hochladen, Details eingeben, PDF herunterladen.
-          </p>
-          <ul class="mt-6 space-y-2">
-            {features.map((f) => <li class="flex items-start"><span class="mt-1 mr-2">✔</span>{f}</li>)}
-          </ul>
-          <div class="mt-8">
-            <a class="btn btn-primary" href="/app">Jetzt starten</a>
+  <main class="og" data-app>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-aura aura-one" aria-hidden="true"></div>
+      <div class="hero-aura aura-two" aria-hidden="true"></div>
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="signal"></span> DER NEXT-GEN DOKUMENT-WORKSPACE</div>
+          <h1 id="hero-heading">Offerten generieren <span>mit generatix<span class="brand-dot">.</span></span></h1>
+          <p class="hero-lead">Präzise. Professionell. Erfrischend einfach. Erstelle Offerten und Rechnungen in einer Oberfläche, die sich nicht wie klassische Bürosoftware anfühlt.</p>
+          <div class="hero-actions">
+            <a href="#generator" class="hero-button">Generator öffnen <span aria-hidden="true">↗</span></a>
+            <span class="hero-free"><span class="status-light"></span> Kostenlos · Ohne Anmeldung</span>
+          </div>
+          <div class="hero-facts">
+            <span>01 <b>Live-PDF</b></span>
+            <span>02 <b>Lokale Daten</b></span>
+            <span>03 <b>Smart Workflow</b></span>
           </div>
         </div>
 
-        <div class="card">
-          <img src="/demo/demo-pdf-preview.png" alt="Beispiel-Offerte" class="rounded-xl w-full" loading="lazy" />
-          <p class="text-xs text-gray-500 mt-2">Beispielansicht – Logos & Farben individuell.</p>
+        <div class="hero-visual" aria-label="Vorschau des Dokument-Workflows">
+          <div class="glass-meta"><span>GENERATIX // WORKSPACE</span><span class="visual-online"><i></i> READY</span></div>
+          <div class="visual-title">Your workflow.<br/><span>Reimagined.</span></div>
+          <div class="visual-document">
+            <div class="visual-document-top">
+              <div class="visual-placeholder-logo"><span>g</span><span>x</span></div>
+              <div class="visual-caption">BUSINESS DOCUMENT<br/>SYSTEM 01</div>
+            </div>
+            <div class="visual-label">OFFER / INVOICE</div>
+            <div class="visual-line wide"></div>
+            <div class="visual-line medium"></div>
+            <div class="visual-line thin"></div>
+            <div class="visual-separator"></div>
+            <div class="visual-row"><span>DOCUMENT STATUS</span><strong>READY TO CREATE</strong></div>
+          </div>
+          <div class="visual-bottom"><span>✧ Designed for clarity</span><span>© generatix</span></div>
         </div>
-      </section>
-    </main>
-
-    <footer class="border-t mt-10">
-      <div class="container py-6 text-sm text-gray-600">
-        © {new Date().getFullYear()} offerte‑generieren.ch – CH‑Hosting, keine Trainingsnutzung der Daten.
       </div>
-    </footer>
-  </body>
-</html>
+    </section>
+
+    <section class="workspace" id="generator">
+      <div class="container">
+        <div class="workspace-head">
+          <div>
+            <div class="eyebrow"><span class="signal"></span> WORKSPACE / GENERATOR</div>
+            <h2>Dein Dokument. <span>Dein Flow.</span></h2>
+            <p>Erstellen, organisieren, exportieren – alles direkt in deinem Browser.</p>
+          </div>
+          <span class="storage-state" data-storage-status>Lokalen Speicher verbinden …</span>
+        </div>
+
+        <nav class="tabs" data-tabs aria-label="Arbeitsbereiche">
+          <button type="button" class="active" data-tab="editor">Erstellen</button>
+          <button type="button" data-tab="offers">Offerten</button>
+          <button type="button" data-tab="invoices">Rechnungen</button>
+          <button type="button" data-tab="customers">Kunden</button>
+          <button type="button" data-tab="catalog">Positionen</button>
+          <button type="button" data-tab="settings">Einstellungen</button>
+        </nav>
+
+        <section class="panel-view" data-panel="editor">
+          <div class="editor-bar">
+            <div>
+              <span class="muted-kicker">ACTIVE DOCUMENT</span>
+              <h3 data-document-number>Neues Dokument</h3>
+              <span class="status-pill" data-document-status>Vorbereitung</span>
+            </div>
+            <div class="toolbar-buttons"></div>
+          </div>
+
+          <div class="editor-grid">
+            <div class="form-card">
+              <nav class="stepper" aria-label="Dokumentschritte">
+                {['Kunde', 'Dokument', 'Positionen', 'Konditionen', 'Ausgabe'].map((label, index) => (
+                  <button type="button" class:list={['step-button', index === 0 && 'active']} data-step-nav={index + 1}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <strong>{label}</strong>
+                  </button>
+                ))}
+              </nav>
+
+              <div class="locked-message" data-locked-message hidden>
+                Diese Rechnung wurde bereits ausgestellt. Der Inhalt ist gesperrt. Den Zahlungsstatus kannst du unter «Rechnungen» verwalten.
+              </div>
+
+              <form data-editor-form novalidate>
+                <section class="step active" data-step="1">
+                  <div class="step-title"><span class="step-count">01</span><div><span class="kicker">RECIPIENT</span><h3>Für wen ist das Dokument?</h3><p>Wähle den passenden Kunden aus deiner Verwaltung.</p></div></div>
+                  <label class="field"><span>Kunde *</span><select name="customerId" data-customer-choice><option value="">Kunde auswählen</option></select></label>
+                  <div class="info-box">Noch kein Kunde vorhanden? Wechsle oben zu «Kunden» und erfasse einen neuen Eintrag. Eine Dokumentnummer entsteht erst beim nächsten Schritt.</div>
+                  <div class="step-actions end"><button type="button" class="btn primary" data-next>Weiter <span aria-hidden="true">↗</span></button></div>
+                </section>
+
+                <section class="step" data-step="2" hidden>
+                  <div class="step-title"><span class="step-count">02</span><div><span class="kicker">DETAILS</span><h3 data-details-heading>Dokument erfassen</h3><p>Nummer, Termin und Projektdaten festlegen.</p></div></div>
+                  <div class="fields two">
+                    <label class="field"><span>Dokumentnummer *</span><input name="number" required /></label>
+                    <label class="field"><span>Ausstellungsdatum *</span><input type="date" name="date" required /></label>
+                  </div>
+                  <div class="fields two">
+                    <label class="field" data-valid-label><span>Gültig bis</span><input type="date" name="validUntil" /></label>
+                    <label class="field" data-due-label hidden><span>Zahlbar bis</span><input type="date" name="dueDate" /></label>
+                    <label class="field"><span>Währung</span><select name="currency"><option value="CHF">CHF</option><option value="EUR">EUR</option></select></label>
+                  </div>
+                  <label class="field"><span>Projekt / Titel *</span><input name="title" placeholder="z. B. Beratung und Umsetzung" required /></label>
+                  <label class="field"><span>Einleitung</span><textarea rows="4" name="introduction"></textarea></label>
+                  <div class="step-actions"><button type="button" class="btn secondary" data-prev>← Zurück</button><button type="button" class="btn primary" data-next>Weiter ↗</button></div>
+                </section>
+
+                <section class="step" data-step="3" hidden>
+                  <div class="step-title"><span class="step-count">03</span><div><span class="kicker">ITEMS</span><h3>Positionen zusammenstellen</h3><p>Gespeicherte Leistungen verwenden oder frei erfassen.</p></div></div>
+                  <label class="field"><span>Gespeicherte Position</span><select data-catalog-choice><option value="">Position auswählen</option></select></label>
+                  <button type="button" class="add-btn" data-add-catalog>+ Aus Katalog hinzufügen</button>
+                  <div class="line-list" data-line-list></div>
+                  <button type="button" class="add-btn" data-add-line>+ Freie Position hinzufügen</button>
+                  <div class="totals" data-form-totals></div>
+                  <div class="step-actions"><button type="button" class="btn secondary" data-prev>← Zurück</button><button type="button" class="btn primary" data-next>Weiter ↗</button></div>
+                </section>
+
+                <section class="step" data-step="4" hidden>
+                  <div class="step-title"><span class="step-count">04</span><div><span class="kicker">TERMS</span><h3>Bedingungen festlegen</h3><p>Steuern, Rabatt und zusätzliche Angaben.</p></div></div>
+                  <div class="fields two">
+                    <label class="field"><span>Preisdarstellung</span><select name="taxMode"><option value="exclusive">Exklusive MWST</option><option value="inclusive">Inklusive MWST</option><option value="none">Ohne MWST</option></select></label>
+                    <label class="field"><span>MWST (%)</span><input name="taxRate" type="number" min="0" max="100" step="0.01" /></label>
+                  </div>
+                  <div class="fields two">
+                    <label class="field"><span>Gesamtrabatt (%)</span><input name="discount" type="number" min="0" max="100" step="0.01" /></label>
+                    <label class="field"><span>Ausführung / Lieferung</span><input name="delivery" /></label>
+                  </div>
+                  <label class="field"><span>Zahlungsbedingungen</span><textarea rows="3" name="paymentTerms"></textarea></label>
+                  <label class="field"><span>Weitere Hinweise</span><textarea rows="4" name="notes"></textarea></label>
+                  <div class="step-actions"><button type="button" class="btn secondary" data-prev>← Zurück</button><button type="button" class="btn primary" data-next>Weiter ↗</button></div>
+                </section>
+
+                <section class="step" data-step="5" hidden>
+                  <div class="step-title"><span class="step-count">05</span><div><span class="kicker">EXPORT</span><h3>Prüfen und ausgeben</h3><p>Kontrolliere die Live-Vorschau vor dem Versand.</p></div></div>
+                  <div class="outputs">
+                    <button type="button" class="output-card primary-output" data-output="pdf"><span class="output-icon">↓</span><span><strong>PDF herunterladen</strong><small>Professionelles A4-Dokument</small></span></button>
+                    <button type="button" class="output-card" data-output="email"><span class="output-icon">✉</span><span><strong>PDF teilen</strong><small>Per E-Mail oder unterstützten Apps versenden</small></span></button>
+                    <button type="button" class="output-card" data-output="print"><span class="output-icon">↗</span><span><strong>Drucken</strong><small>Dokument direkt ausgeben</small></span></button>
+                    <button type="button" class="output-card" data-output="copy"><span class="output-icon">⧉</span><span><strong>Text kopieren</strong><small>Für Word oder andere Anwendungen</small></span></button>
+                    <button type="button" class="output-card" data-output="save"><span class="output-icon">✓</span><span><strong>Lokal speichern</strong><small>Dokument im Browser sichern</small></span></button>
+                  </div>
+                  <div class="invoice-issue" data-invoice-issue hidden><p>Nach dem Ausstellen werden Rechnungsinhalt und Beträge gesperrt.</p><button type="button" class="btn primary" data-issue>Rechnung verbindlich ausstellen ↗</button></div>
+                  <div class="step-actions"><button type="button" class="btn secondary" data-prev>← Angaben prüfen</button></div>
+                </section>
+              </form>
+            </div>
+
+            <aside class="preview-card" aria-label="Dokumentvorschau">
+              <div class="preview-head"><div><span class="muted-kicker">LIVE PREVIEW / A4</span><strong data-preview-heading>Offerte</strong></div><span class="live-dot"><i></i> Echtzeit</span></div>
+              <article class="paper" data-paper>
+                <div class="paper-head"><div><strong data-paper-company>Ihr Unternehmen</strong><p data-paper-company-address></p></div><img data-paper-logo alt="Firmenlogo" hidden /></div>
+                <div class="paper-address"><div><span class="paper-kicker">EMPFÄNGER</span><p data-paper-customer>Kunde auswählen</p></div><div class="paper-meta" data-paper-meta></div></div>
+                <h2 data-paper-title>Offerte</h2>
+                <p class="paper-intro" data-paper-intro></p>
+                <table class="paper-table"><thead><tr><th>Pos.</th><th>Beschreibung</th><th>Menge</th><th>Einzelpreis</th><th>Betrag</th></tr></thead><tbody data-paper-lines></tbody></table>
+                <div class="paper-totals" data-paper-totals></div>
+                <div class="paper-terms" data-paper-terms></div>
+                <div class="paper-foot" data-paper-foot></div>
+              </article>
+            </aside>
+          </div>
+        </section>
+
+        <section class="panel-view" data-panel="offers" hidden>
+          <div class="section-title"><span class="kicker">DOCUMENT LIBRARY</span><h3>Meine Offerten</h3><p>Gespeicherte Offerten öffnen, duplizieren oder in Rechnungen umwandeln.</p></div>
+          <div class="records" data-offer-records></div>
+        </section>
+
+        <section class="panel-view" data-panel="invoices" hidden>
+          <div class="section-title"><span class="kicker">FINANCE OVERVIEW</span><h3>Meine Rechnungen</h3><p>Entwürfe, offene Rechnungen und Zahlungseingänge an einem Ort.</p></div>
+          <div class="stats" data-invoice-stats></div>
+          <div class="records" data-invoice-records></div>
+        </section>
+
+        <section class="panel-view" data-panel="customers" hidden>
+          <div class="section-title"><span class="kicker">CONTACTS</span><h3>Kundenverwaltung</h3><p>Einmal erfassen. Für jedes Dokument wiederverwenden.</p></div>
+          <div class="management-grid">
+            <div class="manage-card"><h4 data-customer-form-title>Neuen Kunden erfassen</h4>
+              <form data-customer-form>
+                <label class="field"><span>Firma / Name *</span><input name="name" required /></label>
+                <label class="field"><span>Kontaktperson</span><input name="contact" /></label>
+                <label class="field"><span>Strasse & Hausnummer</span><input name="street" /></label>
+                <div class="fields location"><label class="field"><span>PLZ</span><input name="zip" /></label><label class="field"><span>Ort</span><input name="city" /></label></div>
+                <label class="field"><span>E-Mail</span><input type="email" name="email" /></label>
+                <label class="field"><span>Telefon</span><input name="phone" /></label>
+                <div class="step-actions"><button type="button" class="btn secondary" data-customer-cancel>Abbrechen / Neu</button><button type="submit" class="btn primary">Kunde speichern ↗</button></div>
+              </form>
+            </div>
+            <div class="manage-card"><h4>Gespeicherte Kunden</h4><input class="search" placeholder="Kunden suchen …" aria-label="Kunden suchen" data-customer-search /><div class="records compact-records" data-customer-records></div></div>
+          </div>
+        </section>
+
+        <section class="panel-view" data-panel="catalog" hidden>
+          <div class="section-title"><span class="kicker">SERVICE LIBRARY</span><h3>Positionsverwaltung</h3><p>Leistungen und Preise intelligent wiederverwenden.</p></div>
+          <div class="management-grid">
+            <div class="manage-card"><h4 data-catalog-form-title>Neue Position erfassen</h4>
+              <form data-catalog-form>
+                <label class="field"><span>Bezeichnung *</span><input name="name" required /></label>
+                <label class="field"><span>Beschreibung</span><textarea name="description" rows="3"></textarea></label>
+                <div class="fields two"><label class="field"><span>Einheit</span><select name="unit"><option>Stk.</option><option>Std.</option><option>Tag</option><option>Pausch.</option><option>m²</option><option>m³</option><option>km</option><option>kg</option></select></label><label class="field"><span>Einzelpreis</span><input type="number" name="price" min="0" step="0.01" value="0" /></label></div>
+                <div class="step-actions"><button type="button" class="btn secondary" data-catalog-cancel>Abbrechen / Neu</button><button type="submit" class="btn primary">Position speichern ↗</button></div>
+              </form>
+            </div>
+            <div class="manage-card"><h4>Gespeicherte Positionen</h4><input class="search" placeholder="Positionen suchen …" aria-label="Positionen suchen" data-catalog-search /><div class="records compact-records" data-catalog-records></div></div>
+          </div>
+        </section>
+
+        <section class="panel-view" data-panel="settings" hidden>
+          <div class="section-title"><span class="kicker">CONFIGURATION</span><h3>Einstellungen & Datensicherung</h3><p>Firmenprofil, individuelle PDF-Farben und lokale Backups.</p></div>
+          <div class="management-grid">
+            <div class="manage-card"><h4>Firmenprofil</h4>
+              <form data-settings-form>
+                <label class="field"><span>Firmenname *</span><input name="name" required /></label>
+                <label class="field"><span>Strasse & Hausnummer</span><input name="street" /></label>
+                <div class="fields location"><label class="field"><span>PLZ</span><input name="zip" /></label><label class="field"><span>Ort</span><input name="city" /></label></div>
+                <label class="field"><span>E-Mail</span><input name="email" type="email" /></label>
+                <label class="field"><span>Telefon</span><input name="phone" /></label>
+                <label class="field"><span>Website</span><input name="website" /></label>
+                <label class="field"><span>MWST-Nummer (optional)</span><input name="vatNumber" /></label>
+                <label class="field"><span>IBAN (optional)</span><input name="iban" /></label>
+                <label class="field"><span>Logo (PNG/JPG, maximal 2 MB)</span><input name="logoFile" type="file" accept="image/png,image/jpeg" /></label>
+                <div class="fields two"><label class="field"><span>Standardwährung</span><select name="currency"><option>CHF</option><option>EUR</option></select></label><label class="field"><span>Standard-MWST (%)</span><input name="taxRate" type="number" min="0" max="100" step="0.01" /></label></div>
+                <div class="fields two"><label class="field"><span>Offertengültigkeit (Tage)</span><input name="validDays" type="number" min="1" max="365" /></label><label class="field"><span>Zahlungsfrist (Tage)</span><input name="paymentDays" type="number" min="1" max="365" /></label></div>
+                <label class="field"><span>Standard-Zahlungsbedingungen</span><textarea rows="3" name="paymentTerms"></textarea></label>
+                <button type="submit" class="btn primary full">Einstellungen speichern ↗</button>
+              </form>
+            </div>
+            <div class="manage-card"><h4>Datensicherung</h4><p class="muted">Alle Stammdaten und Dokumente werden lokal in diesem Browser gespeichert. Bei Geräte-, Browser- oder Domainwechseln benötigst du ein JSON-Backup.</p>
+              <div class="outputs">
+                <button type="button" class="output-card primary-output" data-backup><span class="output-icon">↓</span><span><strong>Vollständiges Backup</strong><small>Dokumente, Kunden und Positionen als JSON</small></span></button>
+                <label class="output-card file-label"><span class="output-icon">↑</span><span><strong>Backup importieren</strong><small>Ersetzt die aktuellen lokalen Daten nach Bestätigung</small></span><input type="file" accept=".json,application/json" data-restore hidden /></label>
+              </div>
+              <div class="info-box">Datenschutz-Hinweis: Browserdaten können durch Zurücksetzen oder automatische Bereinigung verloren gehen. Bitte regelmässig Backups herunterladen.</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="product-outro" aria-label="generatix Vorteile">
+      <div class="container">
+        <div class="outro-top"><span class="eyebrow">DOCUMENTS, REIMAGINED</span><h2>Mehr Flow. <span>Weniger Formulare.</span></h2></div>
+        <div class="feature-grid">
+          <div><span>01 / CREATE</span><strong>Smart Workflow</strong><p>Von der Kundenauswahl bis zum fertigen Dokument – strukturiert, klar und schnell.</p></div>
+          <div><span>02 / PERSONALISE</span><strong>Deine Identität</strong><p>Firmenlogo, Farben und Inhalte passend zum eigenen Unternehmen.</p></div>
+          <div><span>03 / EXPORT</span><strong>Professionelles PDF</strong><p>Geschäftstaugliche A4-Dokumente, bereit für Versand oder Druck.</p></div>
+          <div><span>04 / PRIVACY</span><strong>Lokal & unabhängig</strong><p>Deine Daten bleiben in deinem Browser. Kein Kundenkonto erforderlich.</p></div>
+        </div>
+        <div class="outro-note">generatix <span>— powered by UTOTECH GmbH</span></div>
+      </div>
+    </section>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  import "../scripts/offerten-rechnungen";
+</script>

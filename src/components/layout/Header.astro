@@ -1,0 +1,136 @@
+---
+const navigation = [
+  { label: "Generator", href: "/#generator" },
+  { label: "Offerten", href: "/#generator", tab: "offers" },
+  { label: "Rechnungen", href: "/#generator", tab: "invoices" },
+];
+---
+
+<header class="gx-header">
+  <div class="gx-header-inner">
+    <a class="gx-brand" href="/" aria-label="generatix – Startseite">
+      <span class="gx-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" width="28" height="28">
+          <path d="M9 9.5h12l9 9V30.5H9V9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M21 9.5v9h9M14 24h11M14 28h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M6 7.5h4M8 5.5v4" stroke="#8FE8F1" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="gx-brand-name">genera<span>tix</span><b>.</b></span>
+    </a>
+
+    <nav class="gx-header-links" aria-label="Hauptnavigation">
+      {navigation.map((item) => (
+        <a href={item.href} data-header-tab={item.tab}>{item.label}</a>
+      ))}
+    </nav>
+
+    <a class="gx-header-cta" href="/#generator">
+      Workspace öffnen <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</header>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>("[data-header-tab]").forEach((a) => {
+    a.addEventListener("click", () => {
+      const tab = a.dataset.headerTab;
+      if (!tab) return;
+      // Der Generator verwaltet seine Navigation selbst.
+      // Ein Klick auf die vorhandene Register-Schaltfläche verwendet denselben Ablauf.
+      const target = document.querySelector<HTMLButtonElement>(`[data-tab="${tab}"]`);
+      if (target) target.click();
+    });
+  });
+</script>
+
+<style>
+  .gx-header {
+    position: relative;
+    z-index: 40;
+    background: #0b111c;
+    border-bottom: 1px solid rgba(214, 226, 242, .1);
+  }
+  .gx-header-inner {
+    width: min(calc(100% - 48px), 1240px);
+    min-height: 78px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .gx-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .gx-mark {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border: 1px solid rgba(229, 240, 249, .32);
+    border-radius: 13px;
+    background: linear-gradient(140deg, rgba(225, 237, 247, .18), rgba(225, 237, 247, .025));
+    color: #eaf1fa;
+    box-shadow: inset 0 1px rgba(255, 255, 255, .12), 0 6px 22px rgba(0, 0, 0, .16);
+  }
+  .gx-brand-name {
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    font-weight: 760;
+    font-size: 1.34rem;
+    letter-spacing: -.065em;
+    color: #f5f7fa;
+  }
+  .gx-brand-name > span { color: #c1cfdb; }
+  .gx-brand-name b { color: #8fe8f1; }
+  .gx-header-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+    margin-inline: auto;
+  }
+  .gx-header-links a {
+    color: #9baec0;
+    font-size: .82rem;
+    font-weight: 640;
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+  .gx-header-links a:hover,
+  .gx-header-links a:focus-visible { color: #f3f7fa; }
+  .gx-header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #edf3f7;
+    padding: 11px 16px;
+    border: 1px solid rgba(230, 237, 246, .22);
+    background: linear-gradient(155deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .045));
+    border-radius: 10px;
+    white-space: nowrap;
+    font-weight: 690;
+    font-size: .77rem;
+    transition: border-color .2s, background .2s;
+  }
+  .gx-header-cta:hover { border-color: rgba(165, 226, 237, .6); background: rgba(255, 255, 255, .13); }
+  .gx-header-cta span { color: #8fe8f1; font-size: 1rem; }
+  @media (max-width: 800px) {
+    .gx-header-inner { gap: 15px; }
+    .gx-header-links { gap: 13px; }
+    .gx-header-cta { display: none; }
+  }
+  @media (max-width: 540px) {
+    .gx-header-inner { width: calc(100% - 28px); min-height: 68px; }
+    .gx-mark { width: 35px; height: 35px; }
+    .gx-mark svg { width: 24px; height: 24px; }
+    .gx-brand-name { font-size: 1.1rem; }
+    .gx-header-links { gap: 12px; margin-left: auto; }
+    .gx-header-links a { font-size: .72rem; }
+    .gx-header-links a:nth-child(2) { display: none; }
+  }
+</style>

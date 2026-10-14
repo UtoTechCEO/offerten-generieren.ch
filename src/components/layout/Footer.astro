@@ -1,0 +1,39 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="gx-footer">
+  <div class="gx-footer-inner">
+    <div class="gx-footer-brand">
+      <a href="/" aria-label="generatix – Startseite">generatix<span>.</span></a>
+      <p>Offerten und Rechnungen neu gedacht. Ein Workspace für klare, professionelle Geschäftsdokumente.</p>
+      <small>powered by <strong>UTOTECH GmbH</strong></small>
+    </div>
+    <nav class="gx-footer-links" aria-label="Rechtliches und Navigation">
+      <a href="/#generator">Generator</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/agb">AGB</a>
+    </nav>
+  </div>
+  <div class="gx-footer-bottom">
+    <span>© {year} UTOTECH GmbH</span>
+    <span>offerten-generieren.ch</span>
+    <span>Made for modern business</span>
+  </div>
+</footer>
+
+<style>
+  .gx-footer { position: relative; background: #080d15; color: #a8b6c5; border-top: 1px solid rgba(234, 241, 250, .1); }
+  .gx-footer-inner { width: min(calc(100% - 48px), 1240px); margin: auto; padding: 54px 0 44px; display: flex; justify-content: space-between; gap: 42px; }
+  .gx-footer-brand { max-width: 450px; }
+  .gx-footer-brand > a { color: #f2f5f9; font-size: 1.6rem; letter-spacing: -.06em; font-weight: 800; text-decoration: none; }
+  .gx-footer-brand > a span { color: #8fe8f1; }
+  .gx-footer-brand p { line-height: 1.7; font-size: .86rem; color: #8596a8; margin: 12px 0 23px; }
+  .gx-footer-brand small { font-size: .68rem; letter-spacing: .06em; color: #91a1ae; text-transform: uppercase; }
+  .gx-footer-brand small strong { color: #dce4ee; letter-spacing: .075em; }
+  .gx-footer-links { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 18px 27px; }
+  .gx-footer-links a { color: #a6b5c3; text-decoration: none; font-size: .84rem; }
+  .gx-footer-links a:hover { color: #f4f7fa; }
+  .gx-footer-bottom { border-top: 1px solid rgba(234, 241, 250, .08); width: min(calc(100% - 48px), 1240px); padding: 20px 0 23px; margin: auto; display: flex; justify-content: space-between; gap: 10px; color: #6e8191; font-size: .72rem; }
+  @media (max-width: 660px) { .gx-footer-inner { width: calc(100% - 28px); flex-direction: column; padding: 42px 0 30px; gap: 24px; } .gx-footer-bottom { width: calc(100% - 28px); flex-wrap: wrap; } }
+</style>
